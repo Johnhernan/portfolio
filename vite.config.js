@@ -2,10 +2,19 @@ import tailwindcss from "@tailwindcss/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
     plugins: [sveltekit(), tailwindcss()],
-
+    vite: {
+        resolve: {
+            alias: {
+                $lib: path.resolve('./src/lib'),
+                $components: path.resolve('./src/lib/components'),
+                $routes: path.resolve('./src/routes')
+            },
+        },
+    },
     test: {
         workspace: [{
             extends: "./vite.config.js",
