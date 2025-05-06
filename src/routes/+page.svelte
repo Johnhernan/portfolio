@@ -6,7 +6,7 @@
 <div class="page h-screen flex flex-col">
 
 	<div class="grow flex flex-col">
-		<section id="intro" class="flex py-30 px-15">
+		<section id="intro" class="flex justify-center py-30 px-15">
 			<div class="flex">
 				<h1 class="justify-self-end text-7xl basis-7xl text-[#A27B5C]">
 					Hi, I'm John Hernandez
